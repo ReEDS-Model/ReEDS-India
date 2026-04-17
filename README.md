@@ -4,7 +4,7 @@
 
 This GitHub repository contains the source code for NLR&#39;s ReEDS India model. This version was adapted from the ReEDS model developed for North America. [Table 2](#Tab2) summarizes differences in model design and capabilities between the two versions. 
 
-Users of this source code agree to the ReEDS licensing agreement [https://nrel.gov/analysis/reeds/request-access.html](https://nrel.gov/analysis/reeds/request-access.html). The ReEDS India Version 2019 source code is available at no cost from the National Renewable Energy Laboratory. The ReEDS India model can be downloaded or cloned from [https://github.com/NREL/ReEDS\_OpenAccess](https://github.com/NREL/ReEDS_OpenAccess) (Branch: India). New users must request access to the ReEDS repository through [https://nrel.gov/analysis/reeds/request-access.html](https://nrel.gov/analysis/reeds/request-access.html).
+Users of this source code agree to the ReEDS licensing agreement [https://nrel.gov/analysis/reeds/request-access.html](https://nrel.gov/analysis/reeds/request-access.html).
 
 ## Contents
 
