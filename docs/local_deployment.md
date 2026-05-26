@@ -7,7 +7,7 @@ Before you deploy please make sure you have following softwares installed in you
 * `Docker latest version`: Please visit  https://www.docker.com/get-started/ to download the Docker software. Choose your operating system (OS) type, download, and follow installation prompts.
 * `Git bash`: Please visit the link https://git-scm.com/downloads to download gitbash and choose appropriate operating system
 * `Anaconda` : Used to manage python environments. Please visit https://www.anaconda.com/ to download latest version of Anaconda. Optionally if you have miniconda that also works.
-* `GAMS`: ReEDS uses GAMS to perform optimization. Please visit https://www.gams.com/ to install latest version of GAMS. Note this is not an opensource software you need to have LICENSE to use this. If you are already an NREL employee please reach out to ReEDS India team to get the LICENSE file. 
+* `GAMS`: ReEDS uses GAMS to perform optimization. Please visit https://www.gams.com/ to install latest version of GAMS. Note this is not an opensource software you need to have LICENSE to use this. If you are already an NLR employee please reach out to ReEDS India team to get the LICENSE file. 
 * `Node`: Node is used to run the front end application. Please visit https://nodejs.org/en/ to download the latest version of the code.
 
 
@@ -15,8 +15,8 @@ Before you deploy please make sure you have following softwares installed in you
 
 ReEDS is a set of two microservices. You need to clone following repositories to be able to make changes and test it. Make sure you have an account in GitHub and reach out to ReEDS India team so that they can add you to the repository.
 
-* ReEDS API + ReEDS: `git clone git@github.com:NREL/reeds_india_api.git`
-* ReEDS UI: `git clone git@github.com:NREL/reeds_india_ui.git`
+* ReEDS API + ReEDS: `git clone git@github.com:NLR/reeds_india_api.git`
+* ReEDS UI: `git clone git@github.com:NLR/reeds_india_ui.git`
 
 #### 3. Create a virtual environment
 
@@ -39,7 +39,7 @@ If you are already using pre-setup database for ReEDS you can totally skip this.
 - Use docker to spin off MySQL databse server by running following command. Feel free to change the volume path and password.
 
     ```
-        docker run --name mysql1 -p 3306:3306 -v C:\Users\KDUWADI\Desktop\NREL_Projects\ReEDs\reeds_microservices\reeds_database:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:latest
+        docker run --name mysql1 -p 3306:3306 -v C:\Users\KDUWADI\Desktop\NLR_Projects\ReEDs\reeds_microservices\reeds_database:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:latest
     ```
 
 - Create `reeds` database. I prefer installing MySQL workbench and connecting to the database (https://www.mysql.com/products/workbench/)
@@ -82,7 +82,7 @@ BASE_URL_FOR_SIMULATION_STATUS='http://localhost:5002/notifications'
 REEDS_SENDER=''
 REEDS_SUPERUSER='reedssuperuser'
 REEDS_SUPERUSER_PASSWORD='reedssuperpassword'
-REEDS_SUPERUSER_EMAIL='reeds-india@nrel.gov'
+REEDS_SUPERUSER_EMAIL='reeds-india@nlr.gov'
 NOTIFIERHOST='localhost'
 NOTIFIERPORT='5002'
 REDIS_HOST='localhost'

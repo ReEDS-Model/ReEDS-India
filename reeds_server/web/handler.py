@@ -642,7 +642,7 @@ class Handler:
 
             # Now create a github issue
             # subprocess.run(["gh", "issue", "create", "--title", parsed_data['formdata']['title'],
-            # "--body", parsed_data['formdata']['body']], cwd="C:/Users/KDUWADI/Desktop/NREL_Projects/ReEDs/REEDS-2.0_UI", shell=True)
+            # "--body", parsed_data['formdata']['body']], cwd="C:/Users/KDUWADI/Desktop/NLR_Projects/ReEDs/REEDS-2.0_UI", shell=True)
 
             # Insert bug into the database
             with session_manager() as session:
@@ -1486,7 +1486,7 @@ class Handler:
 
                 username = request["userData"]["username"]
                 if scenario_name in base_scenarios:
-                    username = "NREL (ReEDS India)"
+                    username = "NLR (ReEDS India)"
 
                 # Get the description for the scenario name
                 scenario_data["description"] = self.db.get_scenario_description(

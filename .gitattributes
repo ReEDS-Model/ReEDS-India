@@ -1,0 +1,2 @@
+# Declare files that use git large file storage (LFS)
+*.pkl filter=lfs diff=lfs merge=lfs -text

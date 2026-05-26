@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --account=southasia
-#SBATCH --time=48:00:00  #TIME FOR RUN
+#SBATCH --time=16:00:00  #TIME FOR RUN
 #SBATCH --nodes=1
-#SBATCH --mail-user=prateek.joshi@NREL.gov
+#SBATCH --mail-user=prateek.joshi@nlr.gov
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mem=80000    # RAM in MB
 #SBATCH --qos=high

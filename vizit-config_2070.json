@@ -68,11 +68,11 @@
               "dataSource": "cap_new_ann.csv",
               "type": "bar",
               "agg": "sum",
+              "filter": {},
               "x": "year",
               "name": "tech",
               "col": "scenario",
-              "y": "Investments (MW)",
-              "filter": {}
+              "y": "Investments (MW)"
             }
           ],
           "style": {
@@ -91,11 +91,6 @@
               "dataSource": "firmcap.csv",
               "type": "bar",
               "agg": "sum",
-              "x": "year",
-              "name": "tech",
-              "col": "scenario",
-              "row": "season",
-              "y": "Firm Capacity (MW)",
               "filter": {
                 "year": {
                   "filter_type": "include",
@@ -112,17 +107,17 @@
                     2070
                   ]
                 }
-              }
+              },
+              "x": "year",
+              "name": "tech",
+              "col": "scenario",
+              "row": "season",
+              "y": "Firm Capacity (MW)"
             },
             {
               "dataSource": "peakdem.csv",
               "type": "dot",
               "agg": "sum",
-              "x": "year",
-              "row": "season",
-              "col": "scenario",
-              "name": "type",
-              "y": "PRM requirement (MW)",
               "filter": {
                 "year": {
                   "filter_type": "include",
@@ -139,7 +134,12 @@
                     2070
                   ]
                 }
-              }
+              },
+              "x": "year",
+              "row": "season",
+              "col": "scenario",
+              "name": "type",
+              "y": "PRM requirement (MW)"
             }
           ],
           "style": {
@@ -585,7 +585,7 @@
             }
           ],
           "style": {
-            "Plot Width (px)": "400",
+            "Plot Width (px)": "450",
             "Colorscale (region)": "Blues",
             "Reverse Colorscale (region)": "true",
             "Plot Title": "Wind Capacity in 2070 (MW)",
@@ -625,7 +625,7 @@
           "style": {
             "Colorscale (region)": "Reds",
             "Reverse Colorscale (region)": "false",
-            "Plot Width (px)": "400",
+            "Plot Width (px)": "450",
             "Plot Title": "Solar PV Capacity in 2070 (MW)",
             "Mapbox Style": "white-bg"
           }
@@ -658,7 +658,7 @@
             }
           ],
           "style": {
-            "Plot Width (px)": "400",
+            "Plot Width (px)": "450",
             "Plot Title": "Coal Capacity in 2070 (MW)",
             "Colorscale (region)": "Greys",
             "Reverse Colorscale (region)": "true",
@@ -694,7 +694,7 @@
             }
           ],
           "style": {
-            "Plot Width (px)": "400",
+            "Plot Width (px)": "450",
             "Plot Title": "Natural Gas Capacity in 2070 (MW)",
             "Colorscale (region)": "Greys",
             "Mapbox Style": "white-bg",
@@ -729,7 +729,7 @@
             }
           ],
           "style": {
-            "Plot Width (px)": "400",
+            "Plot Width (px)": "450",
             "Plot Title": "Nuclear Capacity in 2070 (MW)",
             "Colorscale (region)": "Greys",
             "Mapbox Style": "white-bg",
@@ -747,7 +747,9 @@
                   "filter_type": "include",
                   "filter_val": [
                     "BESS 2hr",
-                    "BESS 4hr"
+                    "BESS 4hr",
+                    "BESS 6hr",
+                    "BESS 8hr"
                   ]
                 },
                 "year": {
@@ -765,7 +767,7 @@
             }
           ],
           "style": {
-            "Plot Width (px)": "400",
+            "Plot Width (px)": "450",
             "Plot Title": "Battery Storage Capacity in 2070 (MW)",
             "Colorscale (region)": "Greens",
             "Mapbox Style": "white-bg",

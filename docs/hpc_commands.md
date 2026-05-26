@@ -1,7 +1,7 @@
 # Instructions for first time setup and running ReEDS-India on the HPC
 
 ## Step 1. SSH into an HPC login node
-`ssh -m hmac-sha2-512 [hpc-username]@kestrel.hpc.nrel.gov`
+`ssh -m hmac-sha2-512 [hpc-username]@kestrel.hpc.nlr.gov`
 
 *Type your password and hit enter/return*
 
@@ -32,7 +32,7 @@
 *For this example, we will create a repo called reeds_india_api in projects/southasia.*
 
 ### Clone the reeds_india_api repo (for first time setup only)
-`git clone git@github.com:NREL/reeds_india_api.git`
+`git clone git@github.com:NLR/reeds_india_api.git`
 
 ### Setup environment (for first time setup or if HPC restarts)
 `cd reeds_india_api` <br />
@@ -44,7 +44,7 @@
 
 ### Update srun_template.sh (for first time setup only)
 *Edit shfiles/srun_template.sh* <br />
-- Update `--mail-user=` to your NREL email
+- Update `--mail-user=` to your NLR email
 - Update `--time=` with your best estimate for maximum time needed. *NOTE: A lower time request will have a shorter wait in the queue for a compute node*
 > For command line editing use `vim shfiles/srun_template.sh` or `nano shfiles/srun_template.sh` <br />
 > Other options for editing files: 
@@ -63,7 +63,7 @@
 > - Do you want to iteritavely calculate capacity value and curtailment?: *typically yes (1), hit enter/return (1 is default)*
 > - Compile inputs and model equations?: *yes (1), hit enter/return (1 is default)*
 > - Run model?: **NO. DO NOT RUN ON A LOGIN NODE. TYPE 0 AND HIT ENTER/RETURN.**
-> - Generate shell scripts to run on NREL HPC?: *type 1 and hit enter*
+> - Generate shell scripts to run on NLR HPC?: *type 1 and hit enter*
 
 ## Step 5. Update batch file and submit run(s)
 *At this point you have everything needed to submit a run into the HPC queue. Before you do, double-check options in the .sh batch file for your run.* 
