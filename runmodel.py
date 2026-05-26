@@ -4,7 +4,7 @@
 # name:        runmodel.py
 # purpose:     to handle input and output from GAMS models
 #
-# author:      maxwell brown (maxwell.l.brown@gmail.com), sam koebrich (sam.koebrich@NREL.gov), elainethale
+# author:      maxwell brown (maxwell.l.brown@gmail.com), sam koebrich (sam.koebrich@NLR.gov), elainethale
 #
 # copyright:    free to share
 # -----------------------------------------------------------------------------
@@ -239,7 +239,7 @@ def setupEnvironment(ui_input=None):
 		run = int(input('Run model? (0=no / 1=yes, default 1): ') or 1)
 	
 		if run == 0:
-			hpcchoice = int(input('Generate shell scripts to run on NREL HPC (SLURM)? (0=no / 1=yes, default 1):') or 1)
+			hpcchoice = int(input('Generate shell scripts to run on NLR HPC (SLURM)? (0=no / 1=yes, default 1):') or 1)
 		else:
 			hpcchoice = 0
 	else:
@@ -530,8 +530,8 @@ def runModel(caseindex,options,caseSwitches,lstfile,niter,timetype,yearfile,INPU
 
 			print('done writing files')
 
-def checkLDCpkl(filedst,filename,filesrc=os.path.join('nrelqnap02','ReEDS','8760_Method_Inputs')):
-	"""Copy 8760 files from NREL QNAP server to local folders.
+def checkLDCpkl(filedst,filename,filesrc=os.path.join('nlrqnap02','ReEDS','8760_Method_Inputs')):
+	"""Copy 8760 files from NLR QNAP server to local folders.
 	   For India, this should never run."""
 	
 	if not os.path.exists(os.path.join(filedst, filename)):
@@ -570,16 +570,16 @@ def main(ui_input=None, notify = None, uuid=None):
 		print(" ")
 		print("--------------------------------------------------------------------------------------------------")
 		print(" ")
-		print("         MMM.  808   MMM;   BMW       rMM   @MMMMMMMM2     XM@MMMMMMMMMS   MM0         ")
-		print("        iMMM@S,MMM;X@MMMZ   MMMM.     aMM   MMMW@MMMMMMM   BMMMW@M@M@MMX   MMM         ")
-		print("         r2MMZ     SMMa;i   MMMMM;    SMM   MMB      7MMS  ZMM.            MMM         ")
-		print("           Z         Z      MMZ7MM2   XMM   MMW       MM8  ZMM.            MMM         ")
-		print("        .MMr         .MM7   MM8 rMMB  XMM   MM@     ,MMM   ZMMMMMMMMMM     MMM         ")
-		print("        .MMr         ,MMr   MMB  :MMM :MM   MMW  MMMMMB    ZMMMWMMMMM@     MMM         ")
-		print("           Z         Z      MMW    MMMaMM   MM@   MMMi     ZMM.            MMM         ")
-		print("         XaMM8     aMMZXi   MMW     MMMMM   MM@    0MMr    ZMM.            MMW         ")
-		print("        iMMMW7,MMM;;BMMMZ   MMM      8MMM   MMM     aMMB   0MMMWMMM@MMMZ   MMM@MMMMMMM ")
-		print("         BZ0   SSS   0Z0.   ZBX       :0B   8BS      :BM7  ;8Z8WWWWWW@M2   BZZ0WWWWWWM ")
+		print("           BMW       rMM    MM0           @MMMMMMMM2        ")
+		print("           MMMM.     aMM    MMM           MMMW@MMMMMMM      ")
+		print("           MMMMM;    SMM    MMM           MMB      7MMS     ")
+		print("           MMZ7MM2   XMM    MMM           MMW       MM8     ")
+		print("           MM8 rMMB  XMM    MMM           MM@     ,MMM      ")
+		print("           MMB  :MMM :MM    MMM           MMW  MMMMMB       ")
+		print("           MMW    MMMaMM    MMM           MM@   MMMi        ")
+		print("           MMW     MMMMM    MMW           MM@    0MMr       ")
+		print("           MMM      8MMM    MMM@MMMMMMM   MMM     aMMB      ")
+		print("           ZBX       :0B    BZZ0WWWWWWM   8BS      :BM7     ")
 		print(" ")
 		print("--------------------------------------------------------------------------------------------------")
 		print(" ")

@@ -64,4 +64,4 @@ def process_logs(folder_path, session, bucket_name):
         
 
 if __name__ == '__main__':
-    process_logs(r'C:\Users\KDUWADI\Desktop\NREL_Projects\ReEDs\logs')
+    process_logs(r'C:\Users\KDUWADI\Desktop\NLR_Projects\ReEDs\logs')

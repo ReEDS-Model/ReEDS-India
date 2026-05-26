@@ -4,7 +4,7 @@
 
 This GitHub repository contains the source code for NLR&#39;s ReEDS India model. This version was adapted from the ReEDS model developed for North America. [Table 2](#Tab2) summarizes differences in model design and capabilities between the two versions. 
 
-Users of this source code agree to the ReEDS licensing agreement [https://nrel.gov/analysis/reeds/request-access.html](https://nrel.gov/analysis/reeds/request-access.html). The ReEDS India Version 2019 source code is available at no cost from the National Renewable Energy Laboratory. The ReEDS India model can be downloaded or cloned from [https://github.com/NREL/ReEDS\_OpenAccess](https://github.com/NREL/ReEDS_OpenAccess) (Branch: India). New users must request access to the ReEDS repository through [https://nrel.gov/analysis/reeds/request-access.html](https://nrel.gov/analysis/reeds/request-access.html).
+Users of this source code agree to the ReEDS licensing agreement [https://nlr.gov/analysis/reeds/request-access.html](https://nlr.gov/analysis/reeds/request-access.html). The ReEDS India Version 2019 source code is available at no cost from the National Laboratory of the Rockies. The ReEDS India model can be downloaded or cloned from [https://github.com/NLR/ReEDS\_OpenAccess](https://github.com/NLR/ReEDS_OpenAccess) (Branch: India). New users must request access to the ReEDS repository through [https://nlr.gov/analysis/reeds/request-access.html](https://nlr.gov/analysis/reeds/request-access.html).
 
 ## Contents
 
@@ -29,11 +29,11 @@ Users of this source code agree to the ReEDS licensing agreement [https://nrel.g
   * [ReEDS India Model Switches](#Switches)
     
 <a name="Introduction"></a>
-# Introduction ([https://www.nrel.gov/analysis/reeds/](https://www.nrel.gov/analysis/reeds/)) 
+# Introduction ([https://www.nlr.gov/analysis/reeds/](https://www.nlr.gov/analysis/reeds/)) 
 
 The Regional Energy Deployment System (ReEDS) India model is a capacity planning and dispatch model for the Indian electricity system.
 
-As NLR&#39;s flagship long-term power sector model, ReEDS has served as the primary analytic tool for many studies ([https://www.nrel.gov/analysis/reeds/publications.html](https://www.nrel.gov/analysis/reeds/publications.html)) of important energy sector research questions, including clean energy policy, renewable grid integration, technology innovation, and forward-looking issues of the generation and transmission infrastructure. The ReEDS India model extends this capability to investigate critical power sector question for India.
+As NLR&#39;s flagship long-term power sector model, ReEDS has served as the primary analytic tool for many studies ([https://www.nlr.gov/analysis/reeds/publications.html](https://www.nlr.gov/analysis/reeds/publications.html)) of important energy sector research questions, including clean energy policy, renewable grid integration, technology innovation, and forward-looking issues of the generation and transmission infrastructure. The ReEDS India model extends this capability to investigate critical power sector question for India.
 
 ReEDS uses high spatial resolution and high-fidelity modeling. Though it covers a broad geographic and technological scope, ReEDS is designed to reflect the regional attributes of energy production and consumption. Unique among long-term capacity expansion models, ReEDS possesses advanced algorithms and data to represent the cost and value of variable renewable energy; the full suite of other major generation technologies, including fossil and nuclear; and transmission and storage expansion options. Used in combination with other NLR tools, data, and expertise, ReEDS can provide objective and comprehensive electricity system futures.
 
@@ -79,9 +79,9 @@ While these installation instructions are specific to Windows 10, this version o
 <a name="ConfigRepo"></a>
 ## ReEDS India Repository Configuration
 
-The ReEDS India source code is hosted on GitHub: https://github.com/NREL/ReEDS\_OpenAccess
+The ReEDS India source code is hosted on GitHub: https://github.com/NLR/ReEDS\_OpenAccess
 
-1. Request access to the ReEDS GitHub repository at [https://nrel.gov/analysis/reeds/request-access.html](https://nrel.gov/analysis/reeds/request-access.html).
+1. Request access to the ReEDS GitHub repository at [https://nlr.gov/analysis/reeds/request-access.html](https://nlr.gov/analysis/reeds/request-access.html).
 3. Clone the ReEDS-2.0 repository on your desktop and use the repository with GitHub Desktop. Alternatively, download a ZIP from GitHub ([Figure 4](#Fig4)).
 
 <a name="Fig4"></a>
@@ -311,7 +311,7 @@ GAMS will produced files unique to each case that can help the user with error d
 <a name="Documentation"></a>
 # Documentation
 
-This model is based on the ReEDS Version 2018 created for the United States. All input parameters have been updated to reflect the India context including electricity demand, technology cost and performance, data on existing and planned infrastructure, resource data, and operating and policy constraints. The ReEDS Version 2018 Documentation on which the ReEDS India model is based is available at no cost from the National Renewable Energy Laboratory: [https://www.nrel.gov/docs/fy19osti/72023.pdf](https://www.nrel.gov/docs/fy19osti/72023.pdf)
+This model is based on the ReEDS Version 2018 created for the United States. All input parameters have been updated to reflect the India context including electricity demand, technology cost and performance, data on existing and planned infrastructure, resource data, and operating and policy constraints. The ReEDS Version 2018 Documentation on which the ReEDS India model is based is available at no cost from the National Renewable Energy Laboratory: [https://www.nlr.gov/docs/fy19osti/72023.pdf](https://www.nlr.gov/docs/fy19osti/72023.pdf)
 
 [Table 2](#Tab2) summarizes difference between model design and capabilities in US ReEDS Version 2019 and ReEDS India.
 
@@ -395,7 +395,7 @@ You may update some of the model inputs or constraints to reflect your own data 
 
 If you have comments and/or questions, please contacts the ReEDS team:
 
-[ReEDS.Inquiries@nrel.gov](mailto:ReEDS.Inquiries@nrel.gov)
+[ReEDS.Inquiries@nlr.gov](mailto:ReEDS.Inquiries@nlr.gov)
 
 <a name="Appendix"></a>
 # Appendix

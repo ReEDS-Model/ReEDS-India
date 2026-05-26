@@ -47,14 +47,14 @@ class PopulateDefaultScenario:
         session = db_session()
 
         # Got to create a dummy use for default scenarios
-        default_scenario_user = "NREL (ReEDS India)"  # Donot change this
+        default_scenario_user = "NLR (ReEDS India)"  # Donot change this
         user = Users()
         user.username = default_scenario_user
         default_scenario_password = "does not work!"
         user.password = bcrypt.hashpw(
             default_scenario_password.encode("utf-8"), bcrypt.gensalt()
         )
-        user.email = "dummy.nrel@nrel.gov"
+        user.email = "dummy.nlr@nlr.gov"
         session.add(user)
         session.commit()
 
@@ -83,7 +83,7 @@ class PopulateDefaultScenario:
         ).decode()
         user.email = os.getenv("REEDS_SUPERUSER_EMAIL")
         user.role = "admin"
-        user.organization = "NREL"
+        user.organization = "NLR"
         user.country = "USA"
         session.add(user)
         session.commit()

@@ -17,7 +17,7 @@ import pandas as pd
 import numpy as np
 
 # Set the weather_year (2014 - 2024)
-weather_year = 2014
+weather_year = 2015
 
 if __name__ == '__main__':
     

@@ -90,8 +90,8 @@ class DatabaseHandler:
 
         """ Gives a list of default base scenarios"""
         # Get personnel scenarios filtered by username 
-        base_scenarios_ = session.query(Scenarios).filter(Scenarios.author == 'NREL (ReEDS India)').all()
-        # self.cursor.execute("SELECT * FROM scenarios where author = ?", ['NREL (ReEDS India)'])
+        base_scenarios_ = session.query(Scenarios).filter(Scenarios.author == 'NLR (ReEDS India)').all()
+        # self.cursor.execute("SELECT * FROM scenarios where author = ?", ['NLR (ReEDS India)'])
         # base_scenarios = self.cursor.fetchall()
         
         # Convert to a list of dict
