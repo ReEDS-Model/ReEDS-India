@@ -7,6 +7,7 @@ Created on Wed Jan 30 10:17:40 2019
 
 import argparse
 import os
+import re
 import subprocess
 
 if os.name == 'posix':
@@ -15,9 +16,6 @@ if os.name == 'posix':
 import gdxpds
 import pandas as pd
 import numpy as np
-
-# Set the weather_year (2014 - 2024)
-weather_year = 2015
 
 if __name__ == '__main__':
     
@@ -36,6 +34,22 @@ if __name__ == '__main__':
     
     # Get the static input switch
     load_input = args.filename
+
+    # -------- Determine the weather_year from the scenario name --------
+    # Every scenario name ends with its 4-digit weather year (e.g. BaseCase2015),
+    # matching the 'WeatherYear' switch in cases.csv. This allows multiple
+    # weather-year scenarios to run in parallel without a hard-coded year.
+    weather_year_match = re.search(r'(\d{4})$', scenario)
+    if weather_year_match is None:
+        raise ValueError(
+            "Could not determine the weather year from scenario '{}'. "
+            "Scenario names must end with a 4-digit weather year "
+            "(e.g. 'BaseCase2015').".format(scenario))
+    weather_year = int(weather_year_match.group(1))
+    if not 2014 <= weather_year <= 2024:
+        raise ValueError(
+            "Weather year {} parsed from scenario '{}' is outside the "
+            "supported range (2014 - 2024).".format(weather_year, scenario))
     
     # -------- Define the file paths --------
     user, runname = scenario.split('_')[0], scenario.split('_')[0] + '_' + scenario.split('_')[1]
@@ -82,7 +96,13 @@ if __name__ == '__main__':
     resources = pd.read_pickle(os.path.join(path_static,'India_8760_resources.pkl'))
     #recf = pd.read_pickle(os.path.join(path_static,'India_8760_recf.pkl'))
     recf_file = f'India_8760_recf_{weather_year}.pkl'
-    recf = pd.read_pickle(os.path.join(path_static, recf_file))
+    recf_path = os.path.join(path_static, recf_file)
+    if not os.path.exists(recf_path):
+        raise FileNotFoundError(
+            "Renewable capacity factor file '{}' for weather year {} "
+            "(scenario '{}') was not found in {}.".format(
+                recf_file, weather_year, scenario, path_static))
+    recf = pd.read_pickle(recf_path)
 
     # ------- Performin load modifications -------
     
